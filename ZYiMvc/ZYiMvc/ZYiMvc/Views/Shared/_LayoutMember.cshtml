@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/member.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.0.min.js"></script>
+    <script src="~/Scripts/base.js"></script>
+    <script src="~/Scripts/common.js"></script>
+</head>
+<body>
+    <div class="member_head">
+        <div class="mhead_mid">
+            <div class="mhead_logo"><img src="/images/logow.png" width="264" height="83" /></div>
+            <div class="mhead_right">
+               @Html.Raw(ZY.Extensions.Common.getMemberInfo())
+            </div>
+        </div>
+    </div>
+
+
+    <div class="member">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

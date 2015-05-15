@@ -1,0 +1,352 @@
+﻿@{
+    ViewBag.Title = "注册会员";
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>注册</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-2.1.0.min.js"></script>
+
+    <script src="~/Scripts/base.js"></script>
+    <script src="~/Scripts/common.js"></script>
+    <script src="~/Scripts/Area.js"></script>
+    <script src="~/Scripts/AreaData_min.js"></script>
+</head>
+<body>
+    <div class="mian">
+        <div class="mian_head">
+            <div class="mian_logo"><a href="/Home/Index"><img src="/Images/logo.png" /></a></div>
+        </div>
+        <div class="zhuce">
+            <h1>注册成为会员</h1>
+            <div class="zhuce_nav">
+                <p>
+                    <span>会员类型：</span><em style="position:relative">
+                        加工服务方&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="danxuan1" type="radio" name="huiyuan" id="sell" value="" checked="checked">
+                        需求方&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="danxuan2" type="radio" name="huiyuan" id="buy" value="">
+                    </em>  <b>( 如果你是加工单位，请选择加工服务方；如果你只需要发布加工订单，请选择需求方 )</b>
+                </p>
+                <p>
+                    <span><i></i>会员名称：</span><em>
+                        <input type="text" placeholder="请输入会员名称" id="userName" value="">
+                    </em><b id="u_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span><i></i>登录密码：</span><em>
+                        <input type="password" placeholder="请输入登录密码" name="" id="passWord" value="">
+                    </em><b id="pwd_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+
+                <p>
+                    <span><i></i>确认密码：</span><em>
+                        <input type="password" placeholder="请确认登录密码" name="" id="repeatPassWord" value="">
+                    </em><b id="npwd_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span><i></i>联系人姓名：</span><em>
+                        <input type="text" placeholder="联系人姓名" name="" id="name" value="">
+                    </em><b id="name_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span><i></i>公司性质：</span><em>
+                        <select id="companyType">
+                            <option value="0">请选择</option>
+                            <option value="专业加工企业">专业加工企业</option>
+                            <option value="个体加工厂家" selected="个体加工厂家">个体加工厂家</option>
+                            <option value="生产制造企业">生产制造企业</option>
+                            <option value="进出口贸易公司">进出口贸易公司</option>
+                            <option value="其他行业或机构">其他行业或机构</option>
+                        </select>
+                    </em><b id="ctype_tag" class="error_tipsp"><strong></strong><span></span></b>
+                <p>
+                    <span><i></i>公司或者个体名称：</span><em>
+                        <input type="text" placeholder="请输入公司名称" id="companyName" name="" value="">
+                    </em><b id="cname_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span><i></i>地址：</span>
+                    <em>
+                        <select id="seachprov" style="width:120px;" onchange="changeComplexProvince(this.value, sub_array, 'seachcity', 'seachdistrict');"></select>
+                    </em>
+                    <em style="padding-left:5px;">
+                        <select id="seachcity" style="width:120px;" onchange="changeCity(this.value,'seachdistrict','seachdistrict');"></select>
+                    </em>
+                    <em style="padding-left:5px;" id="seachdistrict_div">
+                        <select id="seachdistrict" style="width:120px;"></select>
+                    </em>
+                    <b id="name_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span><i></i>电子邮箱：</span><em>
+                        <input type="text" placeholder="请确认电子邮箱" name="" id="email" value="">
+                    </em><b id="eamil_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span><i></i>公司电话：</span><em>
+                        <input type="text" placeholder="请输入公司电话" name="" id="phone" value="">
+                    </em><b id="phone_tag" class="error_tipsp"><strong></strong><span></span></b>
+                </p>
+                <p>
+                    <span>联系人手机号码：</span><em>
+                        <input type="text" placeholder="请输入手机号码" name="" id="mobile" value="">
+                    </em>
+                </p>
+                <p>
+                    <span>联系人QQ号码：</span><em>
+                        <input type="text" placeholder="请输入QQ号码" name="" id="qq" value="">
+                    </em>
+                </p>
+                <p>
+                    <span><i></i>验证码：</span><em>
+                        <input style="width:100px" type="text" placeholder="请确认验证码" name="" value="">
+                    </em><img class="yzm_img" id="newCaptcha" onclick="this.src = '/Account/GetValidateCode?' + Math.random()" title="看不清，单击换一张" tabindex="100" />
+                </p>
+                <p style="position:relative">
+                    <a class="btn_tj" href="javascript:;" id="btn_save">提交</a>
+
+                    <em class="ty_p"><input class="tongyi" type="checkbox" checked="checked" id="agreement" name="">同意<a href="#">服务条款</a></em>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(function () {
+        //地区
+        initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, '44', '0', '0');
+        //验证码
+        $('#newCaptcha').trigger('click');
+        var utag = false;
+        var ptag = false;
+        var rptag = false;
+        var ntag = false;
+        var cttag = false;
+        var cntag = false;
+        var atag = false;
+        var etag = false;
+        var ptag = false;
+        var buy = $('#buy'),
+            sell = $('#sell'),
+            userName = $('#userName'),
+            name = $('#name'),
+            cType = $('#companyType'),//公司性质
+            cName = $('#companyName'),//公司或个人名称
+            address = $('#address'),
+            email = $('#email'),
+            phone = $('#phone'),
+            mobile = $('#mobile'),
+            qq = $('#qq'),
+            pwd = $('#passWord'),
+            rpwd = $('#repeatPassWord');
+        //用户名
+        userName.on("change", function () {
+            var error_tag = $("#u_tag");
+            var val = userName.val();
+            if (val == "") {
+                error_tag.show();
+                error_tag.find("span").html("用户名不能为空");
+            }
+            else {
+                AJAX('/Account/JsExistsOfUserName', { userName: val }, function (r) {
+                    if (r.status) {
+                        error_tag.hide();
+                        utag = true;
+                    }
+                    else {
+                        error_tag.show();
+                        error_tag.find("span").html("该帐号已存在");
+                    }
+                }, null, false);
+            }
+        });
+        //密码
+        pwd.on('change', function () {
+            ptag = false;
+            var error_tag = $('#pwd_tag');
+            var val = pwd.val();
+            var msg = '';
+            if (val == '') {
+                msg = '密码不能为空';
+            } else if (val.length < 6 || val.length > 16) {
+                msg = '密码长度必须为6~16位';
+            } else if (/[^\x00-\x7f]/.test(val)) {
+                msg = '密码长度6~16位，数字、字母、符号至少包含两种';
+            } else if (/^\d+$/.test(val)) {
+                msg = '密码不能全为数字';
+            } else if (/^[A-Za-z]+$/.test(val)) {
+                msg = '密码不能全为字母';
+            } else if (/^[^A-Za-z0-9]+$/.test(val)) {
+                msg = '密码不能全为符号';
+            } else {
+                ptag = true;
+            }
+            if (ptag) {
+                error_tag.hide();
+            } else {
+                error_tag.show();
+                error_tag.find("span").html(msg);
+            }
+        });
+        //确认密码
+        rpwd.on('change', function () {
+            rptag = false;
+            var msg = '';
+            var error_tag = $('#npwd_tag');
+            var val = rpwd.val();
+            var np = pwd.val()
+            if (val == '') {
+                msg = '确认密码不能为空';
+            } else if (val != np) {
+                msg = '两次输入的密码不一致';
+            } else {
+                rptag = true;
+            }
+            if (rptag) {
+                error_tag.hide();
+            } else {
+                error_tag.show();
+                error_tag.find("span").html(msg);
+            }
+        });
+        //联系人姓名
+        name.on("change", function () {
+            ntag = false;
+            var error_tag = $("#name_tag");
+            var val = name.val();
+            if (val.length == 0) {
+                error_tag.show();
+                error_tag.find("span").html("用户名不能为空");
+            }
+            else {
+                error_tag.hide();
+                ntag = true;
+            }
+        });
+        //公司或者个体名称
+        cName.on("change", function () {
+            cntag = false;
+            var error_tag = $("#cname_tag");
+            var val = cName.val();
+            if (val.length == 0) {
+                error_tag.show();
+                error_tag.find("span").html("名称不能为空");
+            }
+            else {
+                error_tag.hide();
+                cntag = true;
+            }
+        });
+        //邮箱
+        email.on("change", function () {
+            var error_tag = $("#eamil_tag");
+            var val = email.val();
+            if (val.length == 0) {
+                error_tag.show();
+                error_tag.find("span").html("请输入邮箱地址");
+            } else if (!isEmail(val)) {
+                error_tag.show();
+                error_tag.find("span").html("邮箱地址格式错误");
+            }
+            else {
+                AJAX('/Account/JsMemberOfEmail', { email: val }, function (r) {
+                    if (r.status) {
+                        error_tag.hide();
+                        etag = true;
+                    }
+                    else {
+                        error_tag.show();
+                        error_tag.find("span").html("该邮箱已存在");
+                    }
+                }, null, false);
+            }
+        });
+        //公司电话
+        phone.on("change", function () {
+            ptag = false;
+            var error_tag = $("#phone_tag");
+            var val = phone.val();
+            if (val.length < 7) {
+                error_tag.show();
+                error_tag.find("span").html("请输入正确的号码");
+            }
+            else {
+                error_tag.hide();
+                ptag = true;
+            }
+        });
+        //公司类型
+        cType.on("change", function () {
+            cttag = false;
+            var error_tag = $("#ctype_tag");
+            var val = cType.val();
+            if (val == "0") {
+                error_tag.show();
+                error_tag.find("span").html("请选择公司类型");
+            }
+            else {
+                error_tag.hide();
+                cttag = true;
+            }
+        });
+
+        $('#btn_save').click(function () {
+            if (!($('#agreement').prop('checked'))) {
+                ShowError('未同意相关协议，将无法进行注册');
+                return false;
+            }
+            userName.trigger('change');
+            name.trigger('change');
+            cName.trigger('change');
+            cType.trigger('change');
+            phone.trigger('change');
+            email.trigger('change');
+            pwd.trigger('change');
+            rpwd.trigger('change');
+
+
+            if (utag && rptag && ptag && ntag && cttag && cntag && etag && ptag) {
+                var areaID = getAreaID();
+                //地区名
+                var areaName = getAreaNamebyID(areaID);
+                var param = {
+                    UserName: userName.val(),
+                    Type: buy.checked ? 1 : 0,
+                    PassWord: pwd.val(),
+                    Name: name.val(),
+                    CompanyName: cName.val(),
+                    CompanyType: cType.val(),
+                    AreaID: areaID,
+                    AreaName:areaName,
+                    Address: address.val(),
+                    Email: email.val(),
+                    Phone: phone.val(),
+                    Mobile: mobile.val(),
+                    QQ: qq.val()
+                };
+                if (areaID.length == 0) {
+                    ShowError('请选择省份');
+                    return false;
+                }
+                if (areaID.length == 2) {
+                    ShowError('请选择城市');
+                    return false;
+                }
+                if ($("#seachdistrict_div").is(":visible") == true && areaID.length == 4) {
+                    ShowError('请选择区');
+                    return false;
+                }
+                AJAX('/Account/register', { member: param }, function (r) {
+                    ShowTip('注册成功');
+                    window.location.href = "/Account/Index";
+                });
+            }
+        });
+
+    });
+</script>

@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\发布文件\ZYiWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>01/22/2015 16:11:56</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>05/09/2015 16:36:44</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>05/09/2015 16:36:44</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/de/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>01/22/2015 16:11:52</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>01/22/2015 16:11:52</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>01/22/2015 16:11:53</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>01/22/2015 16:11:53</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>01/22/2015 16:11:53</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>01/22/2015 16:11:53</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>01/22/2015 16:11:43</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/es/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/fr/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/it/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/ja/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/ko/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/22/2015 16:11:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>01/22/2015 16:11:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>01/22/2015 16:11:52</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/ru/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/10/2012 12:07:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/22/2015 16:11:51</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/10/2012 12:07:38</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/22/2015 16:11:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.OData.dll">
+      <publishTime>01/22/2015 16:11:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>01/22/2015 16:11:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>01/22/2015 16:11:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/22/2015 16:11:50</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/22/2015 16:11:56</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>07/09/2013 11:05:10</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>01/22/2015 16:11:52</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>01/22/2015 16:11:59</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Web.WebPages.OAuth.resources.dll">
+      <publishTime>01/22/2015 16:11:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>01/22/2015 16:11:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>07/09/2013 11:34:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/09/2013 11:34:40</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:59</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Optimization.resources.dll">
+      <publishTime>01/22/2015 16:11:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>01/22/2015 16:11:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/WebMatrix.Data.resources.dll">
+      <publishTime>07/09/2013 11:35:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/WebMatrix.WebData.resources.dll">
+      <publishTime>01/22/2015 16:11:59</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.Edm.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Data.OData.resources.dll">
+      <publishTime>01/22/2015 16:11:55</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/System.Spatial.resources.dll">
+      <publishTime>01/22/2015 16:11:54</publishTime>
+    </File>
+    <File Include="bin/ZYiMvc.dll">
+      <publishTime>05/09/2015 16:36:41</publishTime>
+    </File>
+    <File Include="Content/company.css">
+      <publishTime>03/06/2015 17:05:13</publishTime>
+    </File>
+    <File Include="Content/member.css">
+      <publishTime>03/04/2015 15:55:13</publishTime>
+    </File>
+    <File Include="Content/style.css">
+      <publishTime>05/09/2015 15:58:40</publishTime>
+    </File>
+    <File Include="Content/vip.css">
+      <publishTime>03/06/2015 17:05:35</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>01/22/2015 16:11:41</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/22/2015 16:11:41</publishTime>
+    </File>
+    <File Include="Images/22-03-25-83-1.gif">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/banner.jpg">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/company/gus02.jpg">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/jianjie_03.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/jianjie_07.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/jianzhu.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/kaden05.jpg">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/kaden06.jpg">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/logo.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/lx_03.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/ptqy_02.gif">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/ptqy_04.gif">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/ptqy_07.gif">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/qiye_02.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/qiye_06.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/qiye_08.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/qiye_11.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/company/qiye_14.png">
+      <publishTime>03/06/2015 16:52:22</publishTime>
+    </File>
+    <File Include="Images/gus02.jpg">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/honour.jpg">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/honour1.jpg">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/hticon1.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/hticon2.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/hye_03.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/icon-0.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/icon-1.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/icon-2.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/icon-3.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/jg_03.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/jianjie_07.png">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/jianj_03.png">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/jianj_07.png">
+      <publishTime>03/06/2015 16:31:19</publishTime>
+    </File>
+    <File Include="Images/jianzhu.png">
+      <publishTime>03/06/2015 16:31:20</publishTime>
+    </File>
+    <File Include="Images/kaden05.jpg">
+      <publishTime>03/06/2015 16:31:20</publishTime>
+    </File>
+    <File Include="Images/kaden06.jpg">
+      <publishTime>03/06/2015 16:31:20</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/logow.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/nav_onbg.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/pro1.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/pro2.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/pro3.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/pro4.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/pro5.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/pro6.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/proimg.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/qiye.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/vip/banner.jpg">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/gus02.jpg">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/honour.jpg">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/honour1.jpg">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/jianjie_07.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/jianj_03.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/jianj_07.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/jianzhu.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/kaden05.jpg">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/kaden06.jpg">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/logo.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/qiye_02.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_02.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_06.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_07.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_09.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_111.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_14.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_16.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/vip/vip_19.png">
+      <publishTime>03/06/2015 16:32:07</publishTime>
+    </File>
+    <File Include="Images/yzj.png">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/zg_03.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/zg_04.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/zg_07.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/zg_09.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/zg_13.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Images/zg_16.jpg">
+      <publishTime>03/04/2015 15:55:39</publishTime>
+    </File>
+    <File Include="Models/Model.edmx.diagram">
+      <publishTime>05/09/2015 16:28:26</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/22/2015 16:11:59</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>05/09/2015 16:36:42</publishTime>
+    </File>
+    <File Include="Scripts/Area.js">
+      <publishTime>05/09/2015 16:30:57</publishTime>
+    </File>
+    <File Include="Scripts/AreaData_min.js">
+      <publishTime>01/23/2015 18:26:25</publishTime>
+    </File>
+    <File Include="Scripts/base.js">
+      <publishTime>01/26/2015 10:11:24</publishTime>
+    </File>
+    <File Include="Scripts/common.js">
+      <publishTime>04/28/2015 14:44:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.0.min.js">
+      <publishTime>01/26/2015 10:31:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.js">
+      <publishTime>01/22/2015 16:11:48</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.24.min.js">
+      <publishTime>01/22/2015 16:11:48</publishTime>
+    </File>
+    <File Include="Views/Account/Index.cshtml">
+      <publishTime>05/09/2015 16:36:01</publishTime>
+    </File>
+    <File Include="Views/Company/About.cshtml">
+      <publishTime>03/06/2015 17:02:07</publishTime>
+    </File>
+    <File Include="Views/Company/Contact.cshtml">
+      <publishTime>03/06/2015 17:02:08</publishTime>
+    </File>
+    <File Include="Views/Company/Index.cshtml">
+      <publishTime>03/06/2015 17:01:40</publishTime>
+    </File>
+    <File Include="Views/Company/Product.cshtml">
+      <publishTime>03/06/2015 17:03:13</publishTime>
+    </File>
+    <File Include="Views/Home/Buy.cshtml">
+      <publishTime>04/28/2015 15:47:24</publishTime>
+    </File>
+    <File Include="Views/Home/BuyDetail.cshtml">
+      <publishTime>04/28/2015 15:47:34</publishTime>
+    </File>
+    <File Include="Views/Home/Company.cshtml">
+      <publishTime>04/28/2015 15:47:49</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>05/09/2015 12:12:20</publishTime>
+    </File>
+    <File Include="Views/Home/News.cshtml">
+      <publishTime>04/28/2015 15:48:11</publishTime>
+    </File>
+    <File Include="Views/Home/NewsDetail.cshtml">
+      <publishTime>04/28/2015 15:48:23</publishTime>
+    </File>
+    <File Include="Views/Home/Register.cshtml">
+      <publishTime>05/09/2015 16:34:26</publishTime>
+    </File>
+    <File Include="Views/Home/Sell.cshtml">
+      <publishTime>04/28/2015 15:48:32</publishTime>
+    </File>
+    <File Include="Views/Home/SellDetail.cshtml">
+      <publishTime>04/28/2015 15:48:41</publishTime>
+    </File>
+    <File Include="Views/Home/Show.cshtml">
+      <publishTime>04/28/2015 15:48:48</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>01/22/2015 16:11:41</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/28/2015 17:23:53</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>04/28/2015 17:38:55</publishTime>
+    </File>
+    <File Include="Views/Vip/About.cshtml">
+      <publishTime>03/06/2015 16:48:21</publishTime>
+    </File>
+    <File Include="Views/Vip/Contact.cshtml">
+      <publishTime>03/06/2015 16:49:41</publishTime>
+    </File>
+    <File Include="Views/Vip/Culture.cshtml">
+      <publishTime>03/06/2015 16:49:49</publishTime>
+    </File>
+    <File Include="Views/Vip/Honor.cshtml">
+      <publishTime>03/06/2015 16:49:01</publishTime>
+    </File>
+    <File Include="Views/Vip/Index.cshtml">
+      <publishTime>03/06/2015 16:49:25</publishTime>
+    </File>
+    <File Include="Views/Vip/Product.cshtml">
+      <publishTime>03/06/2015 16:47:18</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>01/22/2015 16:11:41</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>01/22/2015 16:11:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/09/2015 13:59:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

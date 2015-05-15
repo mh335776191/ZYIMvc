@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.0.min.js"></script>
+    <script src="~/Scripts/base.js"></script>
+    <script src="~/Scripts/common.js"></script>
+</head>
+<body>
+    <div class="top_mas">
+        <div class="top_nav">
+            <span style="float:left">客服热线：400-535-5624</span>
+            @Html.Partial("_LoginPartial")
+            @*<form><span class="top_nav_login"><a>退出</a></span></form><span class="top_nav_login"><a>hi,like</a></span>*@
+
+        </div>
+    </div>
+    <div class="mian">
+        <div class="mian_head">
+            <div class="mian_logo"><img src="/images/logo.png" /></div>
+            <div class="ser">
+                <ul>
+                    <li><a class="on" href="#">提供加工</a></li>
+                    <li><a href="#">加工订单</a></li>
+                    <li><a href="#">加工企业</a></li>
+                    <li><a href="#">行业资料</a></li>
+                    <li><a href="#">展会资料</a></li>
+                </ul>
+                <input type="text" placeholder="请输入关键字" />
+                <a class="ser_btn" href="#">搜索</a>
+            </div>
+            <a href="#" class="fabtn">
+                发布订单
+            </a>
+        </div>
+        <div class="clear"></div>
+        <div class="nav">
+            @RenderSection("meau")
+
+
+        </div>
+    </div>
+    <div id="body">
+        @RenderBody()
+
+    </div>
+    <div class="footer">
+
+        <div class="mian">
+            <div class="db">
+                <h3>关于我们</h3>
+                <a href="#">联系方式</a>
+                <a href="#">网站留言</a>
+                <a href="#">客服热线</a>
+                <a href="#">常见问题</a>
+            </div>
+
+
+            <div class="db">
+                <h3>关于我们</h3>
+                <a href="#">联系方式</a>
+                <a href="#">网站留言</a>
+                <a href="#">客服热线</a>
+                <a href="#">常见问题</a>
+            </div>
+
+
+            <div class="db">
+                <h3>关于我们</h3>
+                <a href="#">联系方式</a>
+                <a href="#">网站留言</a>
+                <a href="#">客服热线</a>
+                <a href="#">常见问题</a>
+            </div>
+
+
+            <div class="db">
+                <h3>关于我们</h3>
+                <a href="#">联系方式</a>
+                <a href="#">网站留言</a>
+                <a href="#">客服热线</a>
+                <a href="#">常见问题</a>
+            </div>
+
+
+            <div class="db" style="width:330px; text-align:left">
+                <h4>客服热线：400-256-5662</h4>
+                <h4>有限：zhongguozhizao@126.com</h4>
+                <h4>传真：254523365</h4>
+                <h4>公司地址：某某区某某街 某某区某某街 某某区某某街 某某区某某街  </h4>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <div class="bottom">
+        中国制造网 中一信息科技有限公司版权所有 2015-2018 粤B65-56562858  技术支持：微米酷科技
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

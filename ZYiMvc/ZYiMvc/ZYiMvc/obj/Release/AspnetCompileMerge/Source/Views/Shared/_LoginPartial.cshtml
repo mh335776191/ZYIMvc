@@ -1,0 +1,22 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <text>   
+        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <span class="top_nav_login"><a target="_top" href="javascript:document.getElementById('logoutForm').submit()" id="member_logout">退出</a></span>            
+        }
+        @Html.Raw(ZY.Extensions.Common.getMemberMsg())
+     
+    </text>
+}
+else
+{
+    <span class="login_box">
+        @Html.Raw(ZY.Extensions.Common.getMemberMsg()) 
+    </span>
+
+}
+
+
+

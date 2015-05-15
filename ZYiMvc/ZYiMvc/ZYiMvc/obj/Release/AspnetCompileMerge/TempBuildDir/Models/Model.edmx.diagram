@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b02c63f342c14728af2cd3457ae6eea1" Name="Diagram1">
+        <EntityTypeShape EntityType="ZYiModel.News" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ZYiModel.Buy" Width="1.5" PointX="7.875" PointY="12.75" />
+        <EntityTypeShape EntityType="ZYiModel.Crafts" Width="1.5" PointX="8.625" PointY="9.375" />
+        <EntityTypeShape EntityType="ZYiModel.Industry" Width="1.5" PointX="3.375" PointY="7.375" />
+        <EntityTypeShape EntityType="ZYiModel.Sell" Width="1.5" PointX="7.875" PointY="3.5" />
+        <EntityTypeShape EntityType="ZYiModel.Suppliers" Width="1.5" PointX="10.875" PointY="6.875" />
+        <AssociationConnector Association="ZYiModel.FK_Supplier_Crafts" />
+        <EntityTypeShape EntityType="ZYiModel.Member" Width="1.5" PointX="5.625" PointY="5.25" />
+        <AssociationConnector Association="ZYiModel.FK__Buy__MemberID__403A8C7D" />
+        <AssociationConnector Association="ZYiModel.FK__Member__Industry__412EB0B6" />
+        <AssociationConnector Association="ZYiModel.FK__Sell__MemberID__44FF419A" />
+        <AssociationConnector Association="ZYiModel.FK__Suppliers__Membe__46E78A0C" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

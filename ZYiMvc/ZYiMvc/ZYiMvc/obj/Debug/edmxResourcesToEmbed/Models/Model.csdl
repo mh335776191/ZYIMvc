@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZYiModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="News" EntityType="ZYiModel.News" />
+    <EntitySet Name="Buy" EntityType="ZYiModel.Buy" />
+    <EntitySet Name="Crafts" EntityType="ZYiModel.Crafts" />
+    <EntitySet Name="Industry" EntityType="ZYiModel.Industry" />
+    <EntitySet Name="Sell" EntityType="ZYiModel.Sell" />
+    <EntitySet Name="Suppliers" EntityType="ZYiModel.Suppliers" />
+    <AssociationSet Name="FK_Supplier_Crafts" Association="ZYiModel.FK_Supplier_Crafts">
+      <End Role="Crafts" EntitySet="Crafts" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <EntitySet Name="Member" EntityType="ZYiModel.Member" />
+    <AssociationSet Name="FK__Buy__MemberID__403A8C7D" Association="ZYiModel.FK__Buy__MemberID__403A8C7D">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Buy" EntitySet="Buy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Member__Industry__412EB0B6" Association="ZYiModel.FK__Member__Industry__412EB0B6">
+      <End Role="Industry" EntitySet="Industry" />
+      <End Role="Member" EntitySet="Member" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sell__MemberID__44FF419A" Association="ZYiModel.FK__Sell__MemberID__44FF419A">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Sell" EntitySet="Sell" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Suppliers__Membe__46E78A0C" Association="ZYiModel.FK__Suppliers__Membe__46E78A0C">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="Thumbnails" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Click" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Buy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Category" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Click" Type="Int32" Nullable="false" />
+    <Property Name="Img1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsTop" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="IsUrgent" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ValidityDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Member" Relationship="ZYiModel.FK__Buy__MemberID__403A8C7D" FromRole="Buy" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Crafts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Suppliers" Relationship="ZYiModel.FK_Supplier_Crafts" FromRole="Crafts" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Industry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Index" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Member" Relationship="ZYiModel.FK__Member__Industry__412EB0B6" FromRole="Industry" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Sell">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Category" Type="Int32" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Click" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Img3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsTop" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ValidityDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Member" Relationship="ZYiModel.FK__Sell__MemberID__44FF419A" FromRole="Sell" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="CraftsID" Type="Int32" Nullable="false" />
+    <Property Name="Mode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Service" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AboutUs" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Honor" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Culture" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsTop" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Crafts" Relationship="ZYiModel.FK_Supplier_Crafts" FromRole="Suppliers" ToRole="Crafts" />
+    <NavigationProperty Name="Member" Relationship="ZYiModel.FK__Suppliers__Membe__46E78A0C" FromRole="Suppliers" ToRole="Member" />
+  </EntityType>
+  <Association Name="FK_Supplier_Crafts">
+    <End Type="ZYiModel.Crafts" Role="Crafts" Multiplicity="1" />
+    <End Type="ZYiModel.Suppliers" Role="Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Crafts">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="CraftsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IndustryID" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="PassWord" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AreaID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AreaName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WebSite" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QQ" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Levels" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StarDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidityDate" Type="DateTime" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Buy" Relationship="ZYiModel.FK__Buy__MemberID__403A8C7D" FromRole="Member" ToRole="Buy" />
+    <NavigationProperty Name="Industry" Relationship="ZYiModel.FK__Member__Industry__412EB0B6" FromRole="Member" ToRole="Industry" />
+    <NavigationProperty Name="Sell" Relationship="ZYiModel.FK__Sell__MemberID__44FF419A" FromRole="Member" ToRole="Sell" />
+    <NavigationProperty Name="Suppliers" Relationship="ZYiModel.FK__Suppliers__Membe__46E78A0C" FromRole="Member" ToRole="Suppliers" />
+  </EntityType>
+  <Association Name="FK__Buy__MemberID__403A8C7D">
+    <End Type="ZYiModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ZYiModel.Buy" Role="Buy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Buy">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Member__Industry__412EB0B6">
+    <End Type="ZYiModel.Industry" Role="Industry" Multiplicity="1" />
+    <End Type="ZYiModel.Member" Role="Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Member">
+        <PropertyRef Name="IndustryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sell__MemberID__44FF419A">
+    <End Type="ZYiModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ZYiModel.Sell" Role="Sell" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Sell">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Suppliers__Membe__46E78A0C">
+    <End Type="ZYiModel.Member" Role="Member" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ZYiModel.Suppliers" Role="Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
